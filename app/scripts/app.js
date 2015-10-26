@@ -1,36 +1,40 @@
-var app = angular.module('app', ['ui.router']);
+var utahVotes = angular.module('utahVotes', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $urlRouterProvider.otherwise("/");
+utahVotes.config(function($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/home')
 
-  $stateProvider
-    .state('home', {
-      url: "/",
-      templateUrl: "../partials/home.html",
-      controller: "homeCtrl"
-    })
-    .state('profile', {
-      url: "/profile",
-      templateUrl: "../partials/profile.html",
-      controller: "profileCtrl"
-    })
-    .state('messages', {
-      url: "/messages",
-      templateUrl: "../partials/messages.html",
-      controller: "messagesCtrl"
-    })
+    $stateProvider
 
-    $locationProvider.html5Mode({enabled: true, requireBase: false})
+    // Home state
+
+        .state('home', {
+            url: '/home',
+            templateUrl: 'partials/home.html'
+        })
+
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partials/about.html'
+        })
+
+        .state('data', {
+            url: '/data',
+            templateUrl: 'partials/data.html'
+        })
+
+        .state('campaigns', {
+            url: '/campaigns',
+            templateUrl: 'partials/campaigns.html'
+        })
+
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'partials/contact.html'
+        })
+
+        .state('member', {
+            url: '/member',
+            templateUrl: 'partials/member.html'
+        })
 });
-
-app.controller('homeCtrl', ['$scope', function($scope){
-	//...
-}]);
-
-app.controller('profileCtrl', ['$scope', function($scope){
-	//...
-}]);
-
-app.controller('messagesCtrl', ['$scope', function($scope){
-	//...
-}]);
