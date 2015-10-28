@@ -1,7 +1,7 @@
-var utahVotes = angular.module('utahVotes', ['ui.router']);
+var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase']);
 
 utahVotes.config(function($stateProvider, $urlRouterProvider) {
-    
+
     $urlRouterProvider.otherwise('/home')
 
     $stateProvider
@@ -36,5 +36,10 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
         .state('member', {
             url: '/member',
             templateUrl: 'partials/member.html'
+        })
+
+        .state('mapping', {
+            url: '/mapping',
+            templateUrl: 'partials/mapping.html'
         })
 });
