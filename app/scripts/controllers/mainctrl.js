@@ -8,11 +8,9 @@ utahVotes.controller('mainCtrl', ['$scope', '$firebaseArray', '$firebaseAuth',
     
     obj.$loaded().then(function() {
 	    
-	    var authenticate = function() {
+	    $scope.authenticate = function() {
 		    $scope.authObj = $firebaseAuth(ref);
 		    $scope.authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-
-			
 
 			  console.log("Logged in as:", authData);
 			  var success = authFactory.successful(authData, obj);
@@ -35,8 +33,6 @@ utahVotes.controller('mainCtrl', ['$scope', '$firebaseArray', '$firebaseAuth',
 			  $scope.authenticated = false
 			});
 		};
-	
-	authenticate()
 	})
 
 }])
