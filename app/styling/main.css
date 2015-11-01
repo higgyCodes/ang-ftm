@@ -99,6 +99,7 @@ div.container-fluid {
 	background-color: white;
 	border-bottom: 2px, solid, blue;
 }
+
 div {
 	color: black
 }
@@ -143,7 +144,8 @@ section {
 	position: relative;
 	top: 15px;
 	padding: 3%;
-	height: 500px;
+	height: 480px;
+	bottom: 10px;
 }
 
 div.textbody {
@@ -189,7 +191,12 @@ span {
 	border-top-color: red;
 }
 
-
+div.ng-scope {
+	position:relative;
+	height: 100%;
+	overflow: scroll;
+	width: 100%;
+}
 
 aside {
 	position: relative;
