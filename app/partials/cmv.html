@@ -1,0 +1,90 @@
+<div ng-controller="cmvCtrl">
+	<h1> Count My Vote </h1>
+	<button type="button" class="btn" data-toggle="modal" data-target="#myModal"> Add a Candidate </button>
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Candidate Name (Candidate Status)</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p> Personal Details </p>
+	    <p> Orgs Endorsed </p>
+	    <p> Orgs Approved </p>
+	    <p> Orgs Vetting </p>
+		<p> Notes (and Who wrote thems) </p>
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Add A Candidate</h4>
+	      </div>
+	      <!-- Add a Candidate -->
+	      <div class="modal-body">
+	      	<form class="form-horizontal">
+	  	<div class="form-group">
+	    <label for="inputEmail3" class="col-sm-3 control-label">Candidate Name</label>
+	    	<div class="col-sm-9">
+	      		<input class="form-control" ng-model="name">
+	    	</div>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+	    	<div class="col-sm-9">
+	      		<input type="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="user.email">
+	    	</div>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="inputEmail3" class="col-sm-3 control-label">Cell Number</label>
+	    	<div class="col-sm-9">
+	      		<input type="phone" class="form-control" placeholder="(000) 000-000" ng-model="user.cell">
+	    	</div>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="inputEmail3" class="col-sm-3 control-label">Work Number</label>
+	    	<div class="col-sm-9">
+	      		<input type="phone" class="form-control" placeholder="(000) 000-000" ng-model="user.work">
+	    	</div>
+	  	</div>
+
+		  	<div class="form-group">
+		    	<label for="inputPassword3" class="col-sm-3 control-label">Candidate Status</label>
+		    	<div class="col-sm-9">
+		      		<!-- Candidate Status Button -->
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{entry.status}}
+					     <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu">
+					    <li><a href="#" ng-click="entry.status = 'Potential Candidate'">Potential Candidate</a></li>
+					    <li><a href="#" ng-click="entry.status = 'Definite Candidate'">Definite Candidate</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="#" ng-click="entry.status = 'Filed Candidate'">Filed Candidate</a></li>
+					  </ul>
+					</div>
+		    	</div>
+		  	</div>
+
+		  	<textarea class="form-control" placeholder="Additional Candidate Notes" rows="3" ng-model="user.note"></textarea>
+
+
+		</form>
+
+
+
+
+
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>

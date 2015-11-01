@@ -1,7 +1,11 @@
 <div ng-controller="mainCtrl">
 	<h1>Member Login</h1>
 	<button ng-click="authenticate()"> Login </button>
+
+
+
 	<div ng-show="authenticated">
+		<p>Organization News</p>
 		<ul>
 			<li><a ui-sref="mapping">Precinct Mapping</a></li>
 			<li><a ui-sref="cmv">Candidate Recruitment - Count My Vote</a></li>

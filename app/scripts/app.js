@@ -42,4 +42,9 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
             url: '/mapping',
             templateUrl: 'partials/mapping.html'
         })
+
+        .state('cmv', {
+            url: '/cmv',
+            templateUrl: 'partials/cmv.html'
+        })
 });
