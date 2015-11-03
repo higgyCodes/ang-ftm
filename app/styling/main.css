@@ -15,6 +15,13 @@
 	bottom: 0px;
 	right: 40px;
 	}
+	nav.navbar.navbar-default {
+	top: 0px;
+	margin-bottom:0px;
+	height: 115px;
+	border-bottom: 3px #26264A solid;
+	background-color: #26264A;
+}
 }
 
 @media (max-width: 768px) {
@@ -22,6 +29,14 @@
 	background-color: #26264A;
 	right: 40px;
 	}
+
+	nav.navbar.navbar-default {
+	top: 0px;
+	margin-bottom:0px;
+	height: 60px;
+	border-bottom: 3px #26264A solid;
+	background-color: #26264A;
+}
 	.navbar-default .navbar-collapse {
 	border: none;
 	background-color: white;
@@ -74,13 +89,6 @@ nav {
 	height: 120px;
 }
 
-nav.navbar.navbar-default {
-	top: 0px;
-	margin-bottom:0px;
-	height: 70px;
-	border-bottom: 3px #26264A solid;
-	background-color: #26264A;
-}
 
 nav.navbar-collapse {
 	border: none;
@@ -94,7 +102,6 @@ nav.navbar-collapse {
 .navbar-default .navbar-toggle {
     border-color: #C0323A;
     background: #C0323A;
-    mouse
 }
 
 .navbar-default .navbar-toggle:hover {
@@ -241,16 +248,13 @@ div.ng-scope {
 	min-height: 100px;
 }
 
-aside {
+aside#cap {
 	left:0px;
 	padding: 0px;
 	padding-left: 0px;
 	margin: 0px;
-
-}
-
-aside#cap {
 	padding-left: 0px;
+
 }
 
 footer.footer {
