@@ -15,12 +15,14 @@
 	bottom: 0px;
 	right: 40px;
 	}
+
 	nav.navbar.navbar-default {
 	top: 0px;
 	margin-bottom:0px;
 	height: 115px;
-	border-bottom: 3px #26264A solid;
-	background-color: #26264A;
+	border-bottom: 4px #26264A solid;
+	right: 0px;
+	left: 0px;
 }
 }
 
@@ -35,7 +37,7 @@
 	margin-bottom:0px;
 	height: 60px;
 	border-bottom: 3px #26264A solid;
-	background-color: #26264A;
+
 }
 	.navbar-default .navbar-collapse {
 	border: none;
@@ -131,7 +133,7 @@ nav.navbar-collapse {
 	background-color: white;
 	border-color:white;
 	background-image: none;
-	border-bottom: 2px solid #26264A;
+	border-radius: 0 !important;
 }
 
 li {
@@ -151,7 +153,7 @@ div.container-fluid {
 	background-color: white;
 	height: 100%;
 	padding: 0px;
-	margin:0px;
+	border
 }
 
 div {
