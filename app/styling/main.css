@@ -9,7 +9,46 @@
     src: url(assets/fonts/Sentinel-Medium.otf);
 }
 
-*/* {
+@media (min-width: 768px) {
+    ul.nav {
+	position: absolute;
+	bottom: 0px;
+	right: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+    ul.nav.navbar-nav {
+	background-color: #26264A;
+	right: 40px;
+	}
+	.navbar-default .navbar-collapse {
+	border: none;
+	background-color: white;
+	}
+	.in {
+		background-color: blue;
+	}
+}
+
+
+
+@media (max-width: 992px) {
+    nav.navbar.navbar-default {
+    	background-color: #26264A;
+    	height: 50px;
+	}
+	ul.collapse {
+		background-color: #26264A
+	}
+}
+
+
+
+}
+
+
+* /* {
 	border-color: black;
 	border-style: solid;
 	border-width: 2px
@@ -35,24 +74,35 @@ nav {
 	height: 120px;
 }
 
-nav.navbar.navbar-default.navbar-fixed-top {
+nav.navbar.navbar-default {
 	top: 0px;
+	margin-bottom:0px;
+	height: 70px;
+	border-bottom: 3px #26264A solid;
+	background-color: #26264A;
+}
+
+nav.navbar-collapse {
+	border: none;
 }
 
 .navbar-brand {
 	position: relative;
-	height: 120px;
+	height: 110px;
 }
 
 .navbar-default .navbar-toggle {
     border-color: #C0323A;
     background: #C0323A;
-
+    mouse
 }
 
 .navbar-default .navbar-toggle:hover {
-    background: #C0323A;
-    
+    background: #C0323A;    
+}
+
+.navbar-default .navbar-toggle:focus {
+    background: #C0323A;    
 }
 
 /* Navbar Coloring */
@@ -70,21 +120,16 @@ nav.navbar.navbar-default.navbar-fixed-top {
  	background: white;
  	color: #262626;
 }
-.navbar.navbar-default.navbar-fixed-top {
+.navbar.navbar-default {
 	background-color: white;
 	border-color:white;
 	background-image: none;
+	border-bottom: 2px solid #26264A;
 }
 
 li {
 	margin-left: 10px;
 	margin-right: 10px;
-}
-
-ul.nav {
-	position: absolute;
-	bottom: 0px;
-	right: 40px;
 }
 
 div.collapse {
@@ -97,7 +142,9 @@ div.collapse {
 
 div.container-fluid {
 	background-color: white;
-	border-bottom: 2px, solid, blue;
+	height: 100%;
+	padding: 0px;
+	margin:0px;
 }
 
 div {
@@ -105,33 +152,28 @@ div {
 }
 
 div.row {
-	position: relative;
-	top: 120px;
-	border-top-style: solid;
-	border-top-color: #26264A;
-	border-top-width: 6px;
+	max-height: 500px;
+	min-height: 100px;
+	margin: 0px;
+
 }
 
 img.imgcapitol {
-	height: 700px;
-	width: 300px;
+	height: 560px;
 	padding: 0px;
 	margin: 0px;
-	border-right-style: solid;
-	border-top-style: solid;
-	border-width: 6px;
-	border-color: #26264A;
-	overflow: hidden;
-	top: 120px;
-	left: 0px;
-	position: fixed
 }
+
 img.smalllogo {
 	position:relative;
 	left: 40%;
 	right: 40%;
 	width: 50%;
 	top: 10%;
+}
+
+img.navlogo {
+
 }
 
 img.navbar-brand {
@@ -142,15 +184,15 @@ img.navbar-brand {
 
 section {
 	position: relative;
+	overflow: hidden;
 	top: 15px;
 	padding: 3%;
-	height: 450px;
+	height: 100%;
 	bottom: 30px;
 }
 
 div.textbody {
 	position: relative;
-	height: 400px;
 	overflow: scroll;
 	top: 10px;
 	left: 15px;
@@ -193,14 +235,22 @@ span {
 
 div.ng-scope {
 	position:relative;
-	height: 450px;
 	overflow: scroll;
 	width: 100%;
+	max-height: 450px;
+	min-height: 100px;
 }
 
 aside {
-	position: relative;
-	height: 100%;
+	left:0px;
+	padding: 0px;
+	padding-left: 0px;
+	margin: 0px;
+
+}
+
+aside#cap {
+	padding-left: 0px;
 }
 
 footer.footer {
