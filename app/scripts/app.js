@@ -1,4 +1,4 @@
-var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase']);
+var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase', 'ngMap']);
 
 utahVotes.config(function($stateProvider, $urlRouterProvider) {
 
@@ -46,5 +46,15 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
         .state('cmv', {
             url: '/cmv',
             templateUrl: 'partials/cmv.html'
+        })
+
+        .state('openseat', {
+            url: '/openseat',
+            templateUrl: 'partials/openseat.html'
+        })
+
+        .state('potcands', {
+            url: '/potcands',
+            templateUrl: 'partials/potcands.html'
         })
 });
