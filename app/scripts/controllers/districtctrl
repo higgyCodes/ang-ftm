@@ -1,0 +1,5 @@
+utahVotes.controller('cmvCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray){
+
+
+
+}])

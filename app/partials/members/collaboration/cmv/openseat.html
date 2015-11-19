@@ -1,0 +1,57 @@
+<h1> Open Seats </h1>
+
+<button type="button" class="btn" data-toggle="modal" data-target="#myModal"> Add a Potentially Open Seat </button>
+
+	<div class="panel panel-default" ng-repeat="item in list">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">{{item.name}} ({{item.status}}) - {{item.district}}</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p> Cell: {{item.cell}} </p>
+	    <p> Email: {{item.email}} </p>
+	    <p> Orgs Approved </p>
+	    <p> Orgs Vetting </p>
+		<p> Notes: </p>
+		<ul> {{item.note[0].entry}} </ul>
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Add A Potential District</h4>
+	      </div>
+	      <!-- Add a Candidate -->
+	      <div class="modal-body">
+	      	<form class="form-horizontal">
+	  	<div class="form-group">
+	    <label for="inputEmail3" class="col-sm-3 control-label">District Name</label>
+	    	<div class="col-sm-9">
+	      		<input class="form-control" ng-model="entry.name" placeholder="Name">
+	    	</div>
+	  	</div>
+	  	
+		  	<!-- Candidate Notes section -->
+		  	<textarea class="form-control" placeholder="Additional Notes" rows="3" ng-model="entry.note"></textarea>
+
+
+		</form>
+
+
+
+
+
+
+	      </div>
+	      <div class="modal-footer">
+	      	<p>New Update</p>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="test()">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>

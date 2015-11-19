@@ -35,26 +35,36 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
 
         .state('member', {
             url: '/member',
-            templateUrl: 'partials/member.html'
+            templateUrl: 'partials/members/member.html'
         })
 
-        .state('mapping', {
-            url: '/mapping',
-            templateUrl: 'partials/mapping.html'
+            .state('dataResources', {
+                url: '/dataresources',
+                templateUrl: 'partials/members/data-resources/dataresources.html'
+            })
+
+                .state('mapping', {
+                    url: '/mapping',
+                    templateUrl: 'partials/members/data-resources/mapping/mapping.html'
+                })
+
+        .state('collaboration', {
+            url: '/collaboration',
+            templateUrl: 'partials/members/collaboration/collaboration.html'
         })
 
-        .state('cmv', {
-            url: '/cmv',
-            templateUrl: 'partials/cmv.html'
-        })
+            .state('cmv', {
+                url: '/cmv',
+                templateUrl: 'partials/members/collaboration/cmv/cmv.html'
+            })
 
-        .state('openseat', {
-            url: '/openseat',
-            templateUrl: 'partials/openseat.html'
-        })
+                .state('openseat', {
+                    url: '/openseat',
+                    templateUrl: 'partials/members/collaboration/cmv/openseat.html'
+                })
 
-        .state('potcands', {
-            url: '/potcands',
-            templateUrl: 'partials/potcands.html'
-        })
+                .state('potcands', {
+                    url: '/potcands',
+                    templateUrl: 'partials/members/collaboration/cmv/potcands.html'
+                })
 });

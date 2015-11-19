@@ -7,7 +7,6 @@ utahVotes.controller('mainCtrl', ['$scope', '$firebaseArray', '$firebaseAuth',
 	    var entries = new Firebase("https://utah-votes.firebaseio.com/entries");
 		var obj = $firebaseObject(ref);
 	    
-
 	    obj.$loaded().then(function() {
 		    $scope.authObj = $firebaseAuth(ref);
 	    	var authData = $scope.authObj.$getAuth();
@@ -22,9 +21,6 @@ utahVotes.controller('mainCtrl', ['$scope', '$firebaseArray', '$firebaseAuth',
 			} else {
 	  			console.log("Logged out");
 			}
-
-
-
 
 		    $scope.authenticate = function() {
 

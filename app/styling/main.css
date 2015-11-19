@@ -16,8 +16,6 @@
 	right: 40px;
 	}
 
-
-
 	nav.navbar.navbar-default {
 	top: 0px;
 	margin-bottom:0px;
@@ -25,7 +23,7 @@
 	border-bottom: 4px #26264A solid;
 	right: 0px;
 	left: 0px;
-}
+	}
 }
 
 @media (max-width: 768px) {
@@ -290,6 +288,13 @@ div[ng-controller=LayerHeatmapCtrl] #panel{
 li#collapse {
 	color: white;
 }
+
+/******** Email Format ********/
+.email-form {
+	width: 240px;
+}
+
+
 
 /*
 Lighter Grey = #C5C5D7
