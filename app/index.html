@@ -71,11 +71,10 @@
 	</div>
 </div>
 	<footer class="footer" ng-controller="footCtrl">
-			<div class="col-md-6">
-				<p > {{login}} </p>
-			</div>
-			<div class="col-md-6"
-			<!--<p ng-show="logout"><a href="#" ng-click="authObj.$unauth()">Logout</a> 
+		<div class="container">
+			<div class="row" ng-show="logged">
+				<div class="col-md-1">
+				<p class="col-md-3" ng-click="authObj.$unauth()"> Logout </p>
 			</div>
 		</div>
 	</footer>
@@ -84,14 +83,15 @@
 
 <!--Bower-->
 <script type="text/javascript" src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
 <!--Build-->
 <script type="text/javascript" src="scripts/app.js"></script>
 <script type="text/javascript" src="scripts/controllers/mainctrl.js"></script>
 <script type="text/javascript" src="scripts/controllers/footctrl.js"></script>
+<script type="text/javascript" src="scripts/controllers/memberctrl.js"></script>
 <script type="text/javascript" src="scripts/controllers/cmvctrl.js"></script>
 <script type="text/javascript" src="scripts/controllers/email.js"></script>
-<script type="text/javascript" src="scripts/controllers/openseat.js"></script>
 <script type="text/javascript" src="scripts/services/authfact.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 

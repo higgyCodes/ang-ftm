@@ -1,4 +1,4 @@
-var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase', 'ngMap']);
+var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase', 'ngMap', 'ui.bootstrap']);
 
 utahVotes.config(function($stateProvider, $urlRouterProvider) {
 
@@ -35,35 +35,69 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
 
         .state('member', {
             url: '/member',
-            templateUrl: 'partials/members/member.html'
+            templateUrl: 'partials/member.html'
         })
 
-            .state('dataResources', {
-                url: '/dataresources',
-                templateUrl: 'partials/members/data-resources/dataresources.html'
+        .state('booted', {
+            url: '/booted',
+            templateUrl: 'partials/booted.html'
+        })
+
+        .state('logged', {
+            url: '/logged',
+            templateUrl: 'partials/members/logged.html'
+        })
+
+            .state('logged.welcome', {
+                url: '/welcome',
+                templateUrl: 'partials/members/welcome.html'
             })
 
-                .state('mapping', {
-                    url: '/mapping',
-                    templateUrl: 'partials/members/data-resources/mapping/mapping.html'
+            .state('logged.data', {
+                url: '/data',
+                templateUrl: 'partials/members/data/data.html'
+            })
+
+                .state('logged.2015', {
+                    url: '/2015',
+                    templateUrl: 'partials/members/data/2015/2015.html'
                 })
 
-        .state('collaboration', {
+                    .state('logged.2015mayoral', {
+                        url: '/mayoral',
+                        templateUrl: 'partials/members/data/2015/mayoral.html'
+                    })
+                        .state('logged.2015mayoral.head', {
+                        url: '/head',
+                        templateUrl: 'partials/members/data/2015/mayoral/head.html'
+                        })
+
+                        .state('logged.2015mayoral.turnout', {
+                        url: '/turnout',
+                        templateUrl: 'partials/members/data/2015/mayoral/turnout.html'
+                        })
+
+                        .state('logged.2015mayoral.finance', {
+                        url: '/finance',
+                        templateUrl: 'partials/members/data/2015/mayoral/finance.html'
+                        })
+
+        .state('logged.collaboration', {
             url: '/collaboration',
             templateUrl: 'partials/members/collaboration/collaboration.html'
         })
 
-            .state('cmv', {
+            .state('logged.cmv', {
                 url: '/cmv',
                 templateUrl: 'partials/members/collaboration/cmv/cmv.html'
             })
 
-                .state('openseat', {
+                .state('logged.openseat', {
                     url: '/openseat',
                     templateUrl: 'partials/members/collaboration/cmv/openseat.html'
                 })
 
-                .state('potcands', {
+                .state('logged.potcands', {
                     url: '/potcands',
                     templateUrl: 'partials/members/collaboration/cmv/potcands.html'
                 })

@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "homepage": "https://github.com/pathiggins13/mainpage",
+  "authors": [
+    "pathiggins13 <pat_higgins@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "ngmap": "~1.13.15"
+  }
+}
