@@ -77,6 +77,16 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
                         templateUrl: 'partials/members/data/2015/mayoral/turnout.html'
                         })
 
+                        .state('logged.2015mayoral.biskupski', {
+                        url: '/biskupski',
+                        templateUrl: 'partials/members/data/2015/mayoral/biskupski.html'
+                        })
+
+                        .state('logged.2015mayoral.becker', {
+                        url: '/becker',
+                        templateUrl: 'partials/members/data/2015/mayoral/becker.html'
+                        })
+
                         .state('logged.2015mayoral.finance', {
                         url: '/finance',
                         templateUrl: 'partials/members/data/2015/mayoral/finance.html'
