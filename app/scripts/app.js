@@ -67,6 +67,12 @@ utahVotes.config(function($stateProvider, $urlRouterProvider) {
                         url: '/mayoral',
                         templateUrl: 'partials/members/data/2015/mayoral.html'
                     })
+
+                        .state('logged.2015mayoral.summary', {
+                        url: '/summary',
+                        templateUrl: 'partials/members/data/2015/mayoral/summary.html'
+                        })
+
                         .state('logged.2015mayoral.head', {
                         url: '/head',
                         templateUrl: 'partials/members/data/2015/mayoral/head.html'
