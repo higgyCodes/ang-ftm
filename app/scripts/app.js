@@ -1,4 +1,4 @@
-var utahVotes = angular.module('utahVotes', ['ui.router', 'firebase', 'ngMap', 'ui.bootstrap']);
+var utahVotes = angular.module('utahVotes', ['ui.router', 'ngMaterial']);
 
 utahVotes.config(function($stateProvider, $urlRouterProvider) {
 
