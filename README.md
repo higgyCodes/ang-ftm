@@ -1,5 +1,6 @@
 #Follow the Money application
 
+### For the served site go to:
 ##https://ang-ftm.herokuapp.com/
 
 ##To run:
