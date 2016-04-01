@@ -1,4 +1,4 @@
-#Welcome to the express template!
+#Follow the Money application
 
 ##To run:
 
